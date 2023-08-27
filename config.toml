@@ -1,0 +1,4 @@
+baseURL = 'https://darling-cranachan-870c4d.netlify.app'
+languageCode = 'en-us'
+title = 'Twigma'
+pluralizelisttitles = false

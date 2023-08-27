@@ -1,0 +1,81 @@
+# Hugo output directory
+# /public/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Hugo cache and temporary files
+/resources/_gen/
+/resources/_gen/*
+
+# Ignore Hugo configuration file (if not using config.toml)
+# /config.toml
+
+# Ignore compiled Sass/SCSS files
+# /resources/_sass/
+# /resources/_sass/*
+
+# Ignore compiled CSS files
+# /resources/_css/
+# /resources/_css/*
+
+# Ignore compiled JavaScript files
+# /resources/_js/
+# /resources/_js/*
+
+# Ignore Hugo-generated image files
+# /static/images/
+
+# Ignore Hugo-generated thumbnails
+# /static/thumbs/
+
+# Ignore Hugo-generated favicon
+/static/favicon.ico
+
+# Ignore Hugo-generated sitemap
+/static/sitemap.xml
+
+# Ignore Hugo-generated RSS feed
+/static/index.xml
+
+# Ignore Hugo-generated robots.txt
+/static/robots.txt
+
+# Ignore Hugo's cache directory
+/resources/_cache/
+/resources/_cache/*
+
+# Ignore Hugo's workspace file
+/.workspace
+
+# Ignore Hugo's temporary directory
+/resources/_tmp/
+/resources/_tmp/*
+
+# Ignore compiled Hugo resources
+/resources/_resources/
+/resources/_resources/*
+
+# Ignore Hugo's public directory (alternative to /public/)
+# /public/*
+
+# Ignore Hugo's logs
+# /logs/
+# /logs/*
+
+# Ignore Hugo's .DS_Store files
+/static/.DS_Store
+/static/*/.DS_Store
+/static/**/.DS_Store
+
+# Ignore Netlify configuration (if using Netlify)
+# /netlify.toml
+
+# Ignore GitHub Actions workflow files (if using GitHub Actions)
+# /.github/workflows/
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
