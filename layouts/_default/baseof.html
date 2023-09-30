@@ -1,1 +1,37 @@
+<<<<<<< HEAD
 baseof.html
+=======
+{{ $style := resources.Get "scss/style.scss" | toCSS | minify }}
+{{ $js := resources.Get "js/jquery.min.js" | minify  }}
+{{ $mainJs := resources.Get "js/main.js" }}
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hi Ben</title>
+
+
+    <!-- For modern browsers, you can also use these -->
+    <link rel="apple-touch-icon" sizes="180x180" href='{{ "favicons/favicon-xlrg.png" | relURL }}'>
+    <link rel="icon" type="image/png" sizes="180x180" href='{{ "favicons/favicon-xlrg.png" | relURL }}'>
+    <link rel="icon" type="image/png" sizes="64x64" href='{{ "favicons/favicon-lrg.png" | relURL }}'>
+    <link rel="icon" type="image/png" sizes="32x32" href='{{ "favicons/favicon-med.png" | relURL }}'>
+    <link rel="icon" type="image/png" sizes="16x16" href='{{ "favicons/favicon-sml.png" | relURL }}'>
+
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+    <script src="{{ $js.RelPermalink }}" defer></script>
+    <script type="module" src="{{ $mainJs.RelPermalink }}" defer></script>
+  </head>
+  <body >
+		{{ block "page" . }}{{ end }}
+  </body>
+</html>
+
+
+>>>>>>> 5191cf3 (second commit)
