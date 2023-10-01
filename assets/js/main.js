@@ -40,6 +40,32 @@ function animateSections() {
 		});
 	});
 }
+
+function runSwiper() {
+	var swiper = new Swiper(".swiper", {
+      grabCursor: true,
+      centeredSlides: true,
+      // loop: true,
+
+		// // If we need pagination
+		// pagination: {
+		// 	el: ".swiper-pagination",
+		// },
+
+		// Navigation arrows
+		// navigation: {
+		// 	nextEl: ".swiper-button-next",
+		// 	prevEl: ".swiper-button-prev",
+		// },
+
+		// And if we need scrollbar
+		scrollbar: {
+			el: ".swiper-scrollbar",
+			// hide: true,
+		},
+	});
+}
+
 function animateHeader() {
 	// Split the text using SplitText
 	var hiSplit = new SplitText("h1.main", { type: "words,chars" });
@@ -71,26 +97,26 @@ function animateHeader() {
 
 	// Select the intro paragraphs
 	var $introParagraphs = $("header h3");
-			gsap.set($introParagraphs, { opacity: 0, y: 20,});
+	gsap.set($introParagraphs, { opacity: 0, y: 20 });
 
 	// Define the animation for the intro paragraphs
 	setTimeout(function () {
-	$introParagraphs.each(function (index, introParagraph) {
-		gsap.to(introParagraph, {
-			opacity: 1,
-			y: 0,
-			duration: 0.8,
-			delay: 0.1 * index,
-			ease: "back.out(1.7)",
+		$introParagraphs.each(function (index, introParagraph) {
+			gsap.to(introParagraph, {
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				delay: 0.1 * index,
+				ease: "back.out(1.7)",
+			});
 		});
-	});
 	}, 1000); // Adjust the delay time as needed
 }
 
 function animateLastCharacter(char) {
 	gsap.to(char, {
 		rotate: 24,
-		duration: .8,
+		duration: 0.8,
 		ease: "power1.inOut",
 		delay: 1,
 		repeat: -1, // Infinite loop
@@ -109,10 +135,14 @@ $(document).ready(function () {
 	// 	$element.css("opacity", opacity);
 	// });
 	// fadeOutHero();
+
 	setTimeout(function () {
+
 		animateSections();
 		animateHeader();
+		$("html, body").scrollTop(0);
 	}, 100); // Adjust the delay time as needed
+	runSwiper();
 });
 
 window.onload = function () {

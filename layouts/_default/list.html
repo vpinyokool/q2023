@@ -1,65 +1,114 @@
 {{ define "page" }}
 <div class="page-wrapper">
 	<main>
-
 		<section class="fixed fade-out-element">
-			<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.457/build/spline-viewer.js"></script>
-			<spline-viewer url="https://prod.spline.design/k0AjIXpfN8hT94J4/scene.splinecode"></spline-viewer>
+			<script
+				type="module"
+				src="https://unpkg.com/@splinetool/viewer@0.9.457/build/spline-viewer.js"
+			></script>
+			<spline-viewer
+				url="https://prod.spline.design/2r0awukVf7xjWGmo/scene.splinecode"
+			></spline-viewer>
 		</section>
 
 		<section>
-		<header>
-			<div class="leading">
-				<h1 class="--bold main">Hi Ben👋</h1>
-			</div>
-			<div class="trailing">
-				<h3 class="--med --paragraph">
-					I'm stoked about the chance to possibly collaborate! I've
-					always wanted to work together, but it just never quite
-					lined up before.
-				</h3>
-				<h3 class="--med --paragraph">
-					I think we've only had like three chats back when I was at
-					Pinterest! We talked about those crazy expensive Common
-					Project sneakers, geeked out over Lego design, and had a
-					good laugh about how my memoji is basically my twin! You
-					briefly mentioned your cool idea, and I've put together a
-					few projects I had a hand in during my time at Pinterest.
-				</h3>
-				<h3 class="--med --paragraph">
-					If you want to see more or have any questions about them,
-					just give me a shout. Pardon the rough edges of this site.
-				</h3>
-				<h3 class="--med --paragraph">Talk soon!</h3>
-			</div>
-		</header>
+			<header>
+				<div class="leading">
+					<h1 class="--bold main">Hi Ben👋</h1>
+				</div>
+				<div class="trailing">
+					<h3 class="--med --paragraph">
+						I'm stoked about the chance to possibly collaborate!
+						I've always wanted to work together, but it just never
+						quite lined up before.
+					</h3>
+					<h3 class="--med --paragraph">
+						I think we've only had like three chats back when I was
+						at Pinterest! We talked about those crazy expensive
+						Common Project sneakers, geeked out over Lego design,
+						and had a good laugh about how my memoji is basically my
+						twin! You briefly mentioned your cool idea, and I've put
+						together a few projects I had a hand in during my time
+						at Pinterest.
+					</h3>
+					<h3 class="--med --paragraph">
+						If you want to see more or have any questions about
+						them, just give me a shout. Pardon the rough edges of
+						this site.
+					</h3>
+					<h3 class="--med --paragraph">Talk soon!</h3>
+				</div>
+			</header>
 		</section>
 
+		{{ range .Site.Data.projects }} {{ $lowercaseTitle := .name | lower |
+		replaceRE " " "-" }}
+		<section class="project {{ $lowercaseTitle }}">
+			{{ if eq .obj "swipe" }}
 
-{{ range .Site.Data.projects }}
-{{ $lowercaseTitle := .name | lower | replaceRE " " "-" }}
-<section class="project {{ $lowercaseTitle }}">
-<div class="section-img-wrap">
 
-</div>
-<div class="project-info-wrap">
-	<div class="leading">
-	<h3 class="--med">
-		{{ .name }}
-	</h3>
-	<h3 class="--med --secondary">
-		{{ .year }}
-	</h3>
+			<!-- Slider main container -->
+			<div class="swiper section-img-wrap">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					{{ range .slide }} {{ if eq .type "video" }}
+					<!-- Video slide -->
+					<div class="swiper-slide">
+						<div class="video-wrap">
+							<div class="video-inner-wrap">
+								<video autoplay muted loop>
+									<source
+										src="/videos/{{ .url }}"
+										type="video/mp4"
+									/>
+									Your browser does not support the video tag.
+								</video>
+							</div>
+						</div>
+					</div>
+					{{ else if eq .type "img" }}
+					<!-- Image slide -->
+					<div class="swiper-slide">
+						<img src="images/{{ .url }}" alt="" />
+					</div>
+					{{ end }} {{ end }}
+				</div>
+				<!-- If we need scrollbar -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+			{{ else if eq .obj "singleImage" }}
+			<div class="section-img-wrap">
+				<img src="images/{{ .url }}" alt="" />
+			</div>
+			{{ else if eq .obj "singleVideo" }}
+			<div class="section-img-wrap">
+				<div class="video-wrap">
+					<div class="video-inner-wrap">
+						<video autoplay muted loop>
+							<source
+								src="/videos/{{ .url }}"
+								type="video/mp4"
+								/>
+								Your browser does not support the video tag.
+								</video>
+						</div>
+				</div>
+			</div>
+			{{ end }}
 
-</div>
-	<div class="trailing">
-		<p>
-			{{ .caption }}
-		</p>
-	</div>
-</div>
-</section>
-{{ end }}
+
+			<div class="project-info-wrap">
+				<div class="leading">
+					<h3 class="--med">{{ .name }}</h3>
+					<h3 class="--med --secondary">{{ .year }}</h3>
+				</div>
+				<div class="trailing">
+					<p>{{ .caption }}</p>
+				</div>
+			</div>
+		</section>
+
+		{{ end }}
 
 
 	</main>

@@ -1,24 +1,35 @@
 - name: "Your shop"
   year: "2022"
-  obj: "single-video"
+  obj: "singleVideo"
+  url: "yourshop.mp4"
   caption: "caption goes heresomething something"
 
 - name: "OnePin™"
   year: "2022"
-  obj: "single-video"
+  obj: "swipe"
+  slide:
+    - type: "video"
+      url: "onepin.mov"
+    - type: "img"
+      url: "cat.jpg"
   caption: "caption goes heresomething something"
 
 - name: "Pinterest TV"
   year: "2021"
-  obj: "single-video"
+  obj: "singleVideo"
+  url: "onepin.mov"
   caption: "caption goes heresomething something"
 
 - name: "Board use cases"
   year: "2020"
-  obj: "single-video"
+  obj: "singleImage"
+  url: "cat.jpg"
   caption: "caption goes heresomething something"
 
 - name: "LEGO™"
   year: "2020"
-  obj: "single-video"
+  obj: "singleImage"
+  url: "cat.jpg"
   caption: "caption goes heresomething something"
+
+

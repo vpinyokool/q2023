@@ -3,6 +3,7 @@
 {{ $core := resources.Get "js/gsap.min.js" | minify  }}
 {{ $ease := resources.Get "js/easepack.min.js" | minify  }}
 {{ $split := resources.Get "js/splittext.min.js" | minify  }}
+{{ $swiper := resources.Get "js/swiper.js" | minify  }}
 
 {{ $mainJs := resources.Get "js/main.js" }}
 
@@ -30,7 +31,9 @@
     <script src="{{ $core.RelPermalink }}" defer></script>
     <script src="{{ $ease.RelPermalink }}" defer></script>
     <script src="{{ $split.RelPermalink }}" defer></script>
+    <script src="{{ $swiper.RelPermalink }}" defer></script>
     <script src="{{ $mainJs.RelPermalink }}" defer></script>
+
   </head>
   <body>
 		{{ block "page" . }}{{ end }}
