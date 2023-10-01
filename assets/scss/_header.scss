@@ -1,7 +1,12 @@
 header {
 	@include flexbox();
+	@include flex-direction(column);
 	@include align-items(stretch);
-	gap: $s;
+	gap: $s*2;
+	@include respond-to(large) {
+		@include flex-direction();
+			gap: 0;
+	}
 	.leading {
 		flex: 1;
 	}

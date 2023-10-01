@@ -9,7 +9,6 @@ section.project {
 	width: 100%;
 	aspect-ratio: 5/3;
 	border-radius: $s * 2;
-	// max-height: 1000px;
 	overflow: hidden;
 	img {
 		width: 100%;
@@ -38,16 +37,21 @@ section.project {
 
 .project-info-wrap {
 	@include flexbox();
+	@include flex-direction(column);
 	padding-left: $s * 0.2;
 	padding-right: $s * 0.2;
+	gap: $s;
+	@include respond-to(large) {
+		@include flex-direction();
+		gap: 0;
+	}
 	.leading {
 		flex: 1;
 		@include flexbox();
-		// @include flex-direction(column);
 		@include gap(0.5);
 	}
 	.trailing {
-		flex: 2;
+		flex: 1;
 	}
 }
 
@@ -65,12 +69,11 @@ section.project {
 		@include flexbox();
 		overflow: hidden;
 		padding: 0;
-		background-color: blue;
 		aspect-ratio: 375/812;
 		position: relative;
 		height: 100%;
-		border-radius: 44px;
-		box-shadow: 0 0 0 8px rgba(black, .1);
+		border-radius: 1.75vw;
+		box-shadow: 0 0 0 0.5vw rgba(black, 1);
 		video {
 			height: 100%;
 		}

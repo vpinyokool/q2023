@@ -136,13 +136,16 @@ $(document).ready(function () {
 	// });
 	// fadeOutHero();
 
+	runSwiper();
+	$(".twentytwenty-container").twentytwenty();
+
 	setTimeout(function () {
 
 		animateSections();
 		animateHeader();
 		$("html, body").scrollTop(0);
 	}, 100); // Adjust the delay time as needed
-	runSwiper();
+
 });
 
 window.onload = function () {

@@ -26,14 +26,17 @@ h2 {
 
 h3 {
 	font-size: 24px;
-	max-width: 640px;
+	max-width: 800px;
+	@include respond-to(large) {
+		font-size: 28px;
+	}
 	&.--bold {
 		font-weight: 600;
 		letter-spacing: -1px;
 	}
 	&.--med {
 		font-weight: 500;
-		letter-spacing: -.8px;
+		letter-spacing: -1.2px;
 	}
 	&.--secondary {
 		opacity: .6;

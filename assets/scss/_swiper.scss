@@ -506,15 +506,17 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar.swiper-scrollbar-disabled {
 	display: none !important;
 }
+
+//SCROLL BAR HERE
 .swiper-horizontal > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-horizontal {
 	position: absolute;
-	left: var(--swiper-scrollbar-sides-offset, 1%);
+	left: var(--swiper-scrollbar-sides-offset, 16px);
 	bottom: var(--swiper-scrollbar-bottom, 16px);
 	top: var(--swiper-scrollbar-top, auto);
 	z-index: 50;
-	height: var(--swiper-scrollbar-size, 4px);
-	width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+	height: var(--swiper-scrollbar-size, 3px);
+	width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 16px));
 }
 .swiper-scrollbar.swiper-scrollbar-vertical,
 .swiper-vertical > .swiper-scrollbar {
@@ -530,7 +532,7 @@ button.swiper-pagination-bullet {
 	height: 100%;
 	width: 100%;
 	position: relative;
-	background: var(--swiper-scrollbar-drag-bg-color, rgba(0, 0, 0, 0.4));
+	background: var(--swiper-scrollbar-drag-bg-color, rgba(0, 0, 0, 1));
 	border-radius: var(--swiper-scrollbar-border-radius, 10px);
 	left: 0;
 	top: 0;

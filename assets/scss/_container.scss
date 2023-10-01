@@ -22,8 +22,11 @@ main {
 }
 
 section {
-	padding: $s * 10;
+	padding: $s * 5;
 	position: relative;
+	@include respond-to(large) {
+		padding: $s * 10;
+	}
 	&.--max-width {
 		max-width: $content-width;
 		margin: 0 auto;

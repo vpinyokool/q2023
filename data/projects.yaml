@@ -11,25 +11,30 @@
     - type: "video"
       url: "onepin.mov"
     - type: "img"
-      url: "cat.jpg"
+      url: "one-pin-1.svg"
   caption: "caption goes heresomething something"
 
 - name: "Pinterest TV"
   year: "2021"
   obj: "singleVideo"
-  url: "onepin.mov"
+  url: "pintv.mp4"
   caption: "caption goes heresomething something"
 
 - name: "Board use cases"
   year: "2020"
-  obj: "singleImage"
-  url: "cat.jpg"
+  obj: "swipe"
+  slide:
+    - type: "img"
+      url: "use-cases-1.svg"
+    - type: "img"
+      url: "use-cases-2.svg"
   caption: "caption goes heresomething something"
 
 - name: "LEGO™"
   year: "2020"
-  obj: "singleImage"
-  url: "cat.jpg"
+  obj: "beforeAfter"
+  urlBefore: "lego-1.svg"
+  urlAfter: "lego-2.svg"
   caption: "caption goes heresomething something"
 
 

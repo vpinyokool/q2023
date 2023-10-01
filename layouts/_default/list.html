@@ -44,6 +44,15 @@
 		{{ range .Site.Data.projects }} {{ $lowercaseTitle := .name | lower |
 		replaceRE " " "-" }}
 		<section class="project {{ $lowercaseTitle }}">
+						<div class="project-info-wrap">
+				<div class="leading">
+					<h3 class="--med">{{ .name }}</h3>
+					<h3 class="--med --secondary">{{ .year }}</h3>
+				</div>
+				<div class="trailing">
+					<p>{{ .caption }}</p>
+				</div>
+			</div>
 			{{ if eq .obj "swipe" }}
 
 
@@ -80,6 +89,13 @@
 			<div class="section-img-wrap">
 				<img src="images/{{ .url }}" alt="" />
 			</div>
+			{{ else if eq .obj "beforeAfter" }}
+			<div class="section-img-wrap">
+				<div id="bf-container" class="twentytwenty-container">
+				<img src="images/{{ .urlBefore }}" alt="" />
+				<img src="images/{{ .urlAfter }}" alt="" />
+				</div>
+			</div>
 			{{ else if eq .obj "singleVideo" }}
 			<div class="section-img-wrap">
 				<div class="video-wrap">
@@ -96,16 +112,6 @@
 			</div>
 			{{ end }}
 
-
-			<div class="project-info-wrap">
-				<div class="leading">
-					<h3 class="--med">{{ .name }}</h3>
-					<h3 class="--med --secondary">{{ .year }}</h3>
-				</div>
-				<div class="trailing">
-					<p>{{ .caption }}</p>
-				</div>
-			</div>
 		</section>
 
 		{{ end }}
