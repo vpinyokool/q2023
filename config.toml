@@ -1,4 +1,5 @@
-baseURL = 'https://darling-cranachan-870c4d.netlify.app'
 languageCode = 'en-us'
-title = 'Twigma'
+title = 'For Ben'
 pluralizelisttitles = false
+publishDir = 'docs'
+

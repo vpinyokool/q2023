@@ -6,10 +6,7 @@
 {{ $split := resources.Get "js/splittext.min.js" | minify  }}
 {{ $swiper := resources.Get "js/swiper.js" | minify  }}
 {{ $twenty := resources.Get "js/twenty.js" | minify  }}
-
 {{ $mainJs := resources.Get "js/main.js" }}
-
-
 
 <!doctype html>
 <html>
@@ -19,29 +16,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hi Ben!</title>
 
+    <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
 
-    <!-- For modern browsers, you can also use these -->
-    <link rel="apple-touch-icon" sizes="180x180" href='{{ "favicons/favicon-xlrg.png" | relURL }}'>
-    <link rel="icon" type="image/png" sizes="180x180" href='{{ "favicons/favicon-xlrg.png" | relURL }}'>
-    <link rel="icon" type="image/png" sizes="64x64" href='{{ "favicons/favicon-lrg.png" | relURL }}'>
-    <link rel="icon" type="image/png" sizes="32x32" href='{{ "favicons/favicon-med.png" | relURL }}'>
-    <link rel="icon" type="image/png" sizes="16x16" href='{{ "favicons/favicon-sml.png" | relURL }}'>
-
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-
-    <script src="{{ $jq.RelPermalink }}" defer></script>
-    <script src="{{ $core.RelPermalink }}" defer></script>
-    <script src="{{ $ease.RelPermalink }}" defer></script>
-    <script src="{{ $split.RelPermalink }}" defer></script>
-    <script src="{{ $swiper.RelPermalink }}" defer></script>
-    <script src="{{ $jqMove.RelPermalink }}" defer></script>
-    <script src="{{ $twenty.RelPermalink }}" defer></script>
-    <script src="{{ $mainJs.RelPermalink }}" defer></script>
-
+    <script src="{{ $jq.Permalink | relURL }}" defer></script>
+    <script src="{{ $core.Permalink | relURL }}" defer></script>
+    <script src="{{ $ease.Permalink | relURL }}" defer></script>
+    <script src="{{ $split.Permalink | relURL }}" defer></script>
+    <script src="{{ $swiper.Permalink | relURL }}" defer></script>
+    <script src="{{ $jqMove.Permalink | relURL }}" defer></script>
+    <script src="{{ $twenty.Permalink | relURL }}" defer></script>
+    <script src="{{ $mainJs.Permalink | relURL }}" defer></script>
   </head>
   <body>
-		{{ block "page" . }}{{ end }}
+    {{ block "page" . }}{{ end }}
   </body>
 </html>
-
-
