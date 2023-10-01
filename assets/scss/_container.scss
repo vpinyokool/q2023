@@ -1,0 +1,43 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background-color: $bg-default;
+	h1,
+	h2,
+	h3,
+	p {
+		color: $text-default;
+	}
+}
+
+main {
+}
+
+section {
+	&.--max-width {
+		max-width: $content-width;
+		margin: 0 auto;
+	}
+	padding: $s*10;
+}
+
+
+
+.section-img-wrap {
+background-color: yellow;
+width: 100%;
+aspect-ratio: 5/2;
+border-radius: $s*3;
+}
+
+.project-info-wrap {
+	.leading {
+
+	}
+	.trailing {
+
+	}
+}

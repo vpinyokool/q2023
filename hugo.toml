@@ -1,7 +1,4 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-<<<<<<< HEAD
-=======
 pluralizelisttitles = false
->>>>>>> 5191cf3 (second commit)

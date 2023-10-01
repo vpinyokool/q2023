@@ -1,8 +1,9 @@
-<<<<<<< HEAD
-baseof.html
-=======
 {{ $style := resources.Get "scss/style.scss" | toCSS | minify }}
-{{ $js := resources.Get "js/jquery.min.js" | minify  }}
+{{ $jq := resources.Get "js/jquery.min.js" | minify  }}
+{{ $core := resources.Get "js/gsap.min.js" | minify  }}
+{{ $ease := resources.Get "js/easepack.min.js" | minify  }}
+{{ $split := resources.Get "js/splittext.min.js" | minify  }}
+
 {{ $mainJs := resources.Get "js/main.js" }}
 
 
@@ -13,7 +14,7 @@ baseof.html
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hi Ben</title>
+    <title>Hi Ben!</title>
 
 
     <!-- For modern browsers, you can also use these -->
@@ -25,13 +26,15 @@ baseof.html
 
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-    <script src="{{ $js.RelPermalink }}" defer></script>
-    <script type="module" src="{{ $mainJs.RelPermalink }}" defer></script>
+    <script src="{{ $jq.RelPermalink }}" defer></script>
+    <script src="{{ $core.RelPermalink }}" defer></script>
+    <script src="{{ $ease.RelPermalink }}" defer></script>
+    <script src="{{ $split.RelPermalink }}" defer></script>
+    <script src="{{ $mainJs.RelPermalink }}" defer></script>
   </head>
-  <body >
+  <body>
 		{{ block "page" . }}{{ end }}
   </body>
 </html>
 
 
->>>>>>> 5191cf3 (second commit)

@@ -1,0 +1,14 @@
+header {
+	@include flexbox();
+	@include align-items(stretch);
+	gap: $s;
+	.leading {
+		flex: 1;
+	}
+	.trailing {
+		@include flexbox();
+		@include flex-direction(column);
+		gap: $s*2;
+		flex: 1;
+	}
+}
