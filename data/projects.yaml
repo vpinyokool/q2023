@@ -9,9 +9,9 @@
   obj: "swipe"
   slide:
     - type: "video"
-      url: "onepin.mov"
+      url: "onepin.mp4"
     - type: "img"
-      url: "one-pin-1.svg"
+      url: "one-pin-1.png"
   caption: "A horizontal effort across Create and Inspire to scale Pin closeup into the future, bringing closer the inconsistency between all the different pin types. A massive efforted started with Minnie and Felice, led by Angela with Q as a thought partner"
 
 - name: "Pinterest TV"
@@ -25,14 +25,14 @@
   obj: "swipe"
   slide:
     - type: "img"
-      url: "use-cases-1.svg"
+      url: "use-cases-1.png"
     - type: "img"
-      url: "use-cases-2.svg"
+      url: "use-cases-2.png"
   caption: "Act vision — an attemp to connect Creators with Pinners using Boards as a verhical. In this world, Creators will be able to create guides and discussion from inspirations they've collected. From the Pinners side, they can reach out to experts and collaborate with them on a 1:1 basis. Credit also goes to Avantika, Annie, and Jenny "
 
 - name: "LEGO™"
   year: "2019"
   obj: "beforeAfter"
-  urlBefore: "lego-1.svg"
-  urlAfter: "lego-2.svg"
+  urlBefore: "lego-1.png"
+  urlAfter: "lego-2.png"
   caption: "My first project at Pinterest. Spearheaded by Albert. A close collaboration between Annie, Patrik and Q."
