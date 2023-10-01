@@ -18,12 +18,15 @@ body {
 }
 
 main {
-	 -webkit-perspective: 3500px;
+	-webkit-perspective: 3500px;
 }
 
 section {
-	padding: $s * 5;
+	padding: $s*4 $s*2;
 	position: relative;
+	@include respond-to(medium) {
+		padding: $s * 5;
+	}
 	@include respond-to(large) {
 		padding: $s * 10;
 	}
@@ -31,39 +34,31 @@ section {
 		max-width: $content-width;
 		margin: 0 auto;
 	}
-	&.fixed {
-		position: fixed;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		padding: 0;
-	}
 }
 
 div.fixed {
-		position: fixed;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		padding: 0;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	opacity: 0;
+	transition: opacity 400ms ease;
+	&._loaded {
 		opacity: 0;
-		transition: opacity 400ms ease;
-		&._loaded {
-			opacity: .4;
+		@include respond-to(large) {
+			opacity: 0.4;
 		}
+	}
 }
-
-
 
 .page-wrapper {
 	overflow: clip;
 }
 
 :host(a#logo) {
-  display: none !important;
+	display: none !important;
 	opacity: 0 !important;
 }

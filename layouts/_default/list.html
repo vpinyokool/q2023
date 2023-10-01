@@ -39,9 +39,8 @@
 			</div>
 			{{ if eq .obj "swipe" }}
 
-
 			<!-- Slider main container -->
-			  <div class="swiper section-img-wrap">
+			  <div class="swiper section-img-wrap {{ .class }}">
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
 					{{ range .slide }} {{ if eq .type "video" }}
@@ -72,7 +71,7 @@
 				<div class="swiper-scrollbar"></div>
 			</div>
 			{{ else if eq .obj "singleImage" }}
-			<div class="section-img-wrap">
+			<div class="section-img-wrap {{ .class }}">
 				<img src="images/{{ .url }}" alt="" />
 			</div>
 			{{ else if eq .obj "beforeAfter" }}
@@ -83,7 +82,7 @@
 				</div>
 			</div>
 			{{ else if eq .obj "singleVideo" }}
-			<div class="section-img-wrap">
+			<div class="section-img-wrap {{ .class }}">
 				<div class="video-wrap">
 					<div class="video-inner-wrap">
 						<video autoplay muted loop>

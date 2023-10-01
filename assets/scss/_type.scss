@@ -1,10 +1,16 @@
 // heading
 
 h1 {
-	font-size: 104px;
+	font-size: 60px;
+	@include respond-to(large) {
+		font-size: 104px;
+	}
 	&.--bold {
 		font-weight: 600;
-		letter-spacing: -5.2px;
+		letter-spacing: -2px;
+		@include respond-to(large) {
+			letter-spacing: -5.2px;
+		}
 	}
 	&.--med {
 		font-weight: 500;
@@ -25,8 +31,11 @@ h2 {
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 17px;
 	max-width: 800px;
+	@include respond-to(medium) {
+		font-size: 24px;
+	}
 	@include respond-to(large) {
 		font-size: 28px;
 	}
@@ -36,10 +45,13 @@ h3 {
 	}
 	&.--med {
 		font-weight: 500;
+		letter-spacing: -.7px;
+			@include respond-to(medium) {
 		letter-spacing: -1.2px;
 	}
+	}
 	&.--secondary {
-		opacity: .6;
+		opacity: 0.6;
 	}
 }
 
@@ -54,14 +66,20 @@ h3 {
 // paragraph
 
 p {
-	font-size: 19px;
-	line-height: 1.5;
+	font-size: 14px;
 	max-width: 800px;
+	line-height: 1.5;
 	font-weight: 500;
+	letter-spacing: -0.2px;
+	opacity: 1;
+	@include respond-to(medium) {
+		font-size: 16px;
+		opacity: .6;
+		letter-spacing: -.7px;
+	}
 	@include respond-to(large) {
 		max-width: 640px;
 	}
-	letter-spacing: -0.4px;
 	&.--secondary {
 		font-size: 12px;
 	}

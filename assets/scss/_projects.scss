@@ -8,11 +8,12 @@ section.project {
 	width: 100%;
 	aspect-ratio: 5/4;
 	border-radius: $s * 2;
-	&._dont-resize {
-		aspect-ratio: 5/3;
-	}
+	order: 0;
+
+
 	@include respond-to(large) {
 		aspect-ratio: 5/3;
+		order: 1;
 	}
 	overflow: hidden;
 		.slide-img-container {
@@ -44,6 +45,9 @@ section.project {
 	.lego™ & {
 		background-color: $gum;
 	}
+	&._dont-resize {
+		aspect-ratio: 5/3;
+	}
 }
 
 .project-info-wrap {
@@ -52,9 +56,12 @@ section.project {
 	padding-left: $s * 0.2;
 	padding-right: $s * 0.2;
 	gap: $s;
+	order: 1;
+
 	@include respond-to(large) {
 		@include flex-direction();
 		gap: 0;
+		order: 0;
 	}
 	.leading {
 		flex: 1;
@@ -73,9 +80,12 @@ section.project {
 	@include justify-content(center);
 	position: relative;
 	height: 100%;
-	padding: $s*4;
+	padding: $s*2;
 	margin: 0 auto;
 	text-align: center;
+	@include respond-to(medium) {
+		padding: $s*4;
+	}
 	@include respond-to(large) {
 		padding: $s*10;
 	}
