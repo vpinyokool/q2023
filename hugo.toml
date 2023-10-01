@@ -2,3 +2,4 @@ languageCode = 'en-us'
 title = 'For Ben'
 pluralizelisttitles = false
 publishDir = 'docs'
+relativeURLs = true
