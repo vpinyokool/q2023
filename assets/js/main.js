@@ -1,16 +1,7 @@
-const $body = $("body");
-const $element = $(".fade-out-element");
-let opacity = 1;
+var $body = $("body");
+var $pin = $("div.fixed");
+var $bf = $(".twentytwenty-container");
 
-function fadeOutHero() {
-	// Create a GSAP timeline to smoothly animate the opacity change
-	const timeline = gsap.timeline();
-	timeline.to($element, {
-		opacity: 0,
-		duration: 0.5,
-		ease: "power1.inOut",
-	});
-}
 function animateSections() {
 	$("section").each(function (index) {
 		const section = $(this);
@@ -125,30 +116,17 @@ function animateLastCharacter(char) {
 	});
 }
 
-$(document).ready(function () {
-	// Listen to the scroll event
-	// $(window).scroll(function () {
-	// 	// Calculate the opacity based on the scroll position
-	// 	opacity = 1 - $(window).scrollTop() / 400; // Adjust the threshold as needed
-
-	// 	// Apply the opacity to the element
-	// 	$element.css("opacity", opacity);
-	// });
-	// fadeOutHero();
-
-	runSwiper();
-	$(".twentytwenty-container").twentytwenty();
-
-	setTimeout(function () {
-
-		animateSections();
-		animateHeader();
-		$("html, body").scrollTop(0);
-	}, 100); // Adjust the delay time as needed
-
-});
-
 window.onload = function () {
 	var shadowRoot = document.querySelector("spline-viewer").shadowRoot;
 	shadowRoot.querySelector("#logo").remove();
+
+	$pin.addClass("_loaded");
+	$bf.twentytwenty();
+	$body.scrollTop(0);
+
+	runSwiper();
+	animateSections();
+	animateHeader();
+
+
 };

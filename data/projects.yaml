@@ -2,7 +2,7 @@
   year: "2022"
   obj: "singleVideo"
   url: "yourshop.mp4"
-  caption: "caption goes heresomething something"
+  caption: "I was brought in to help redefine the vision of the Storefront by Long and Xiang, with the brief to bring taste-based shopping onto Pinterest."
 
 - name: "OnePin™"
   year: "2022"
@@ -12,13 +12,13 @@
       url: "onepin.mov"
     - type: "img"
       url: "one-pin-1.svg"
-  caption: "caption goes heresomething something"
+  caption: "A horizontal effort across Create and Inspire to scale Pin closeup into the future, bringing closer the inconsistency between all the different pin types. A massive efforted started with Minnie and Felice, led by Angela with Q as a thought partner"
 
 - name: "Pinterest TV"
   year: "2021"
   obj: "singleVideo"
   url: "pintv.mp4"
-  caption: "caption goes heresomething something"
+  caption: "Artifacts for a research study to redefine marco navigation within the product, bringing Pinners a more immersive TV-like experience. Credit also goes to Altay, Theresa, and Alice over in TwoTwenty"
 
 - name: "Board use cases"
   year: "2020"
@@ -28,13 +28,11 @@
       url: "use-cases-1.svg"
     - type: "img"
       url: "use-cases-2.svg"
-  caption: "caption goes heresomething something"
+  caption: "Act vision — an attemp to connect Creators with Pinners using Boards as a verhical. In this world, Creators will be able to create guides and discussion from inspirations they've collected. From the Pinners side, they can reach out to experts and collaborate with them on a 1:1 basis. Credit also goes to Avantika, Annie, and Jenny "
 
 - name: "LEGO™"
-  year: "2020"
+  year: "2019"
   obj: "beforeAfter"
   urlBefore: "lego-1.svg"
   urlAfter: "lego-2.svg"
-  caption: "caption goes heresomething something"
-
-
+  caption: "My first project at Pinterest. Spearheaded by Albert. A close collaboration between Annie, Patrik and Q."

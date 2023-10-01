@@ -54,10 +54,14 @@ h3 {
 // paragraph
 
 p {
-	font-size: 16px;
+	font-size: 19px;
 	line-height: 1.5;
+	max-width: 800px;
 	font-weight: 500;
-	max-width: 640px;
+	@include respond-to(large) {
+		max-width: 640px;
+	}
+	letter-spacing: -0.4px;
 	&.--secondary {
 		font-size: 12px;
 	}

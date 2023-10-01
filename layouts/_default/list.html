@@ -1,15 +1,10 @@
 {{ define "page" }}
 <div class="page-wrapper">
 	<main>
-		<section class="fixed fade-out-element">
-			<script
-				type="module"
-				src="https://unpkg.com/@splinetool/viewer@0.9.457/build/spline-viewer.js"
-			></script>
-			<spline-viewer
-				url="https://prod.spline.design/2r0awukVf7xjWGmo/scene.splinecode"
-			></spline-viewer>
-		</section>
+		<div class="fixed fade-out-element">
+			<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.457/build/spline-viewer.js"></script>
+			<spline-viewer url="https://prod.spline.design/2r0awukVf7xjWGmo/scene.splinecode"></spline-viewer>
+		</div>
 
 		<section>
 			<header>
@@ -18,23 +13,12 @@
 				</div>
 				<div class="trailing">
 					<h3 class="--med --paragraph">
-						I'm stoked about the chance to possibly collaborate!
-						I've always wanted to work together, but it just never
-						quite lined up before.
-					</h3>
-					<h3 class="--med --paragraph">
-						I think we've only had like three chats back when I was
-						at Pinterest! We talked about those crazy expensive
-						Common Project sneakers, geeked out over Lego design,
-						and had a good laugh about how my memoji is basically my
-						twin! You briefly mentioned your cool idea, and I've put
-						together a few projects I had a hand in during my time
-						at Pinterest.
+						Hope you had a nice weekend, I've put together a few projects I had a hand in during my time at Pinterest. Needless to say, I'm beyond for a chance to work together.
 					</h3>
 					<h3 class="--med --paragraph">
 						If you want to see more or have any questions about
-						them, just give me a shout. Pardon the rough edges of
-						this site.
+						them any of these projects, just give me a shout. Pardon the rough edges of
+						this site, put this together pretty quickly over this weekend.
 					</h3>
 					<h3 class="--med --paragraph">Talk soon!</h3>
 				</div>
@@ -57,7 +41,7 @@
 
 
 			<!-- Slider main container -->
-			<div class="swiper section-img-wrap">
+			  <div class="swiper section-img-wrap">
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
 					{{ range .slide }} {{ if eq .type "video" }}
@@ -78,7 +62,9 @@
 					{{ else if eq .type "img" }}
 					<!-- Image slide -->
 					<div class="swiper-slide">
-						<img src="images/{{ .url }}" alt="" />
+						<div class="slide-img-container">
+							<img src="images/{{ .url }}" alt="" />
+						</div>
 					</div>
 					{{ end }} {{ end }}
 				</div>
@@ -90,7 +76,7 @@
 				<img src="images/{{ .url }}" alt="" />
 			</div>
 			{{ else if eq .obj "beforeAfter" }}
-			<div class="section-img-wrap">
+			<div class="section-img-wrap _dont-resize">
 				<div id="bf-container" class="twentytwenty-container">
 				<img src="images/{{ .urlBefore }}" alt="" />
 				<img src="images/{{ .urlAfter }}" alt="" />

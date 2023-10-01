@@ -5,11 +5,22 @@ section.project {
 }
 
 .section-img-wrap {
-	background-color: $lilac;
 	width: 100%;
-	aspect-ratio: 5/3;
+	aspect-ratio: 5/4;
 	border-radius: $s * 2;
+	&._dont-resize {
+		aspect-ratio: 5/3;
+	}
+	@include respond-to(large) {
+		aspect-ratio: 5/3;
+	}
 	overflow: hidden;
+		.slide-img-container {
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(center);
+		height: 100%;
+	}
 	img {
 		width: 100%;
 		height: auto;
@@ -62,9 +73,12 @@ section.project {
 	@include justify-content(center);
 	position: relative;
 	height: 100%;
-	padding: $s*10;
+	padding: $s*4;
 	margin: 0 auto;
 	text-align: center;
+	@include respond-to(large) {
+		padding: $s*10;
+	}
 	.video-inner-wrap {
 		@include flexbox();
 		overflow: hidden;

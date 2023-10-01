@@ -32,15 +32,29 @@ section {
 		margin: 0 auto;
 	}
 	&.fixed {
-		// pointer-events: none;
+		position: fixed;
 		z-index: -1;
 		top: 0;
 		left: 0;
 		width: 100vw;
-		height: 50vh;
-		position: fixed;
+		height: 100vh;
 		padding: 0;
 	}
+}
+
+div.fixed {
+		position: fixed;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		padding: 0;
+		opacity: 0;
+		transition: opacity 400ms ease;
+		&._loaded {
+			opacity: .4;
+		}
 }
 
 
