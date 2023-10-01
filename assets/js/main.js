@@ -90,7 +90,7 @@ function animateHeader() {
 function animateLastCharacter(char) {
 	gsap.to(char, {
 		rotate: 24,
-		duration: 1.2,
+		duration: .8,
 		ease: "power1.inOut",
 		delay: 1,
 		repeat: -1, // Infinite loop
@@ -101,21 +101,21 @@ function animateLastCharacter(char) {
 
 $(document).ready(function () {
 	// Listen to the scroll event
-	$(window).scroll(function () {
-		// Calculate the opacity based on the scroll position
-		opacity = 1 - $(window).scrollTop() / 400; // Adjust the threshold as needed
+	// $(window).scroll(function () {
+	// 	// Calculate the opacity based on the scroll position
+	// 	opacity = 1 - $(window).scrollTop() / 400; // Adjust the threshold as needed
 
-		// Apply the opacity to the element
-		$element.css("opacity", opacity);
-	});
-	fadeOutHero();
+	// 	// Apply the opacity to the element
+	// 	$element.css("opacity", opacity);
+	// });
+	// fadeOutHero();
 	setTimeout(function () {
 		animateSections();
 		animateHeader();
 	}, 100); // Adjust the delay time as needed
 });
 
-// window.onload = function () {
-// 	var shadowRoot = document.querySelector("spline-viewer").shadowRoot;
-// 	shadowRoot.querySelector("#logo").remove();
-// };
+window.onload = function () {
+	var shadowRoot = document.querySelector("spline-viewer").shadowRoot;
+	shadowRoot.querySelector("#logo").remove();
+};

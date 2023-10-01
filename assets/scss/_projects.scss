@@ -41,11 +41,11 @@ background-color: $gum;
 	.leading {
 		flex: 1;
 		@include flexbox();
-		@include flex-direction(column);
+		// @include flex-direction(column);
 		@include gap(.5);
 	}
 	.trailing {
-		flex: 1;
+		flex: 2;
 	}
 }
 
