@@ -24,6 +24,8 @@ main {
 section {
 	padding: $s*4 $s*2;
 	position: relative;
+	max-width: 1600px;
+	margin: 0 auto;
 	@include respond-to(medium) {
 		padding: $s * 5;
 	}

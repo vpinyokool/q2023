@@ -96,7 +96,13 @@ section.project {
 		aspect-ratio: 375/812;
 		position: relative;
 		height: 100%;
-		border-radius: 1.75vw;
+		border-radius: 2.4vw;
+		@include respond-to(medium) {
+			border-radius: 2.4vw;
+		}
+		@include respond-to(large) {
+			border-radius: 1.75vw;
+		}
 		box-shadow: 0 0 0 0.5vw rgba(black, 1);
 		video {
 			height: 100%;
