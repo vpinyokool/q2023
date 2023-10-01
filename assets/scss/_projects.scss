@@ -1,15 +1,52 @@
+section.project {
+	@include flexbox();
+	@include flex-direction(column);
+	@include gap(2);
+}
+
 .section-img-wrap {
 background-color: $lilac;
 width: 100%;
-aspect-ratio: 5/2;
+aspect-ratio: 5/2.5;
 border-radius: $s*2;
+.your-shop & {
+background-color: $lilac;
+}
+
+.onepin™ & {
+background-color: $blue;
+}
+
+.pinterest-tv & {
+background-color: $green;
+}
+
+.board-use-cases & {
+background-color: $vanilla;
+}
+
+.lego™ & {
+background-color: $gum;
+}
+
+
+
+
 }
 
 .project-info-wrap {
+	@include flexbox();
+	padding-left: $s*.2;
+	padding-right: $s*.2;
 	.leading {
-
+		flex: 1;
+		@include flexbox();
+		@include flex-direction(column);
+		@include gap(.5);
 	}
 	.trailing {
-
+		flex: 1;
 	}
 }
+
+

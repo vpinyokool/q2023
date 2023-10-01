@@ -1,10 +1,16 @@
 {{ define "page" }}
 <div class="page-wrapper">
 	<main>
+
+		<section class="fixed fade-out-element">
+<!-- 			<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.457/build/spline-viewer.js"></script>
+			<spline-viewer url="https://prod.spline.design/k0AjIXpfN8hT94J4/scene.splinecode"></spline-viewer> -->
+		</section>
+
 		<section>
 		<header>
 			<div class="leading">
-				<h1 class="--bold">Hi Ben!</h1>
+				<h1 class="--bold main">Hi Ben👋</h1>
 			</div>
 			<div class="trailing">
 				<h3 class="--med --paragraph">
@@ -29,28 +35,32 @@
 		</header>
 		</section>
 
-<section>
+
+{{ range .Site.Data.projects }}
+{{ $lowercaseTitle := .name | lower | replaceRE " " "-" }}
+<section class="project {{ $lowercaseTitle }}">
 <div class="section-img-wrap">
 
 </div>
 <div class="project-info-wrap">
 	<div class="leading">
-	<h3>
-		Title
+	<h3 class="--med">
+		{{ .name }}
 	</h3>
-	<br>
-	<h3>
-		Year
+	<h3 class="--med --secondary">
+		{{ .year }}
 	</h3>
 
 </div>
 	<div class="trailing">
 		<p>
-			Subtitle here
+			{{ .caption }}
 		</p>
 	</div>
 </div>
 </section>
+{{ end }}
+
 
 	</main>
 </div>
