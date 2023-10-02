@@ -1,6 +1,8 @@
 var $body = $("body");
 var $pin = $("div.fixed");
 var $bf = $(".twentytwenty-container");
+// Lock the body's overflow to prevent scrolling
+
 
 function whichDay() {
 	  // Get the current date
@@ -39,7 +41,6 @@ function animateSections() {
 			delay: 0.5 * index, // Staggered delay
 			ease: "back.out(1.7)",
 			onComplete: function () {
-				// console.log("Animation complete");
 				$body.removeClass();
 			},
 		});
