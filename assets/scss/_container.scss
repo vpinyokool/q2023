@@ -26,6 +26,16 @@ section {
 	position: relative;
 	max-width: 1600px;
 	margin: 0 auto;
+
+
+// ANIMATION STYLE
+			opacity: 0;
+			transform: translateY(200px);
+			transform: rotateX(30deg);
+			transform-style: preserve-3d;
+
+
+
 	@include respond-to(medium) {
 		padding: $s * 5;
 	}
@@ -49,7 +59,7 @@ div.fixed {
 	opacity: 0;
 	transition: opacity 400ms ease;
 	&._loaded {
-		opacity: 0;
+		opacity: 0.4;
 		@include respond-to(large) {
 			opacity: 0.4;
 		}

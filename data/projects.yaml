@@ -3,7 +3,7 @@
   class: ""
   obj: "singleVideo"
   url: "yourshop.mp4"
-  caption: "I was brought in to help redefine the vision of the Storefront by Long and Xiang, with the brief to bring taste-based shopping onto Pinterest."
+  caption: "I was brought in to help redefine the vision of the Storefront by Long and Xiang. Our focus was to created taste-based shopping experience on Pinterest."
 
 - name: "OnePin™"
   year: "2022"
@@ -14,14 +14,14 @@
       url: "onepin.mp4"
     - type: "img"
       url: "one-pin-1.png"
-  caption: "A horizontal effort across Create and Inspire to scale Pin closeup into the future, bringing closer the inconsistency between all the different pin types. A massive efforted started with Minnie and Felice, led by Angela with Q as a thought partner"
+  caption: "A collaborative initiative spanning Create and Inspire, with the goal of scaling the closeup experience into the future and close the inconsistent gaps across all Pin types. This massive effort was initiated by Minnie and the research team. Felice and Angela, brought me in as a thought partner."
 
 - name: "Pinterest TV"
   year: "2021"
   class: ""
   obj: "singleVideo"
   url: "pintv.mp4"
-  caption: "Artifacts for a research study to redefine marco navigation within the product, bringing Pinners a more immersive TV-like experience. Credit also goes to Altay, Theresa, and Alice over in TwoTwenty"
+  caption: "A research artifact for Pinterest TV, where we investigate various mental models for macro-navigation within the product, enhancing the immersive TV-like experience for Pinners. In collaboration with Altay, Theresa, and Alice from TwoTwenty."
 
 - name: "Board use cases"
   year: "2020"
@@ -32,7 +32,9 @@
       url: "use-cases-1.png"
     - type: "img"
       url: "use-cases-2.png"
-  caption: "Act vision — an attemp to connect Creators with Pinners using Boards as a verhical. In this world, Creators will be able to create guides and discussion from inspirations they've collected. From the Pinners side, they can reach out to experts and collaborate with them on a 1:1 basis. Credit also goes to Avantika, Annie, and Jenny "
+  caption: " A concept work center around enhancing the connection between Creators and Pinners through the utilization of Boards as a framework. In this space, Creators can create guides and foster discussions inspired by their saved Pins. Simultaneously, Pinners have the opportunity to connect with experts and engage in one-on-one collaborations. In collaborations with Avantika, Annie, and Jenny."
+
+
 
 - name: "LEGO™"
   year: "2019"
@@ -40,4 +42,6 @@
   obj: "beforeAfter"
   urlBefore: "lego-1.png"
   urlAfter: "lego-2.png"
-  caption: "My first project at Pinterest. Spearheaded by Albert. A close collaboration between Annie, Patrik and Q."
+  caption: "My first project at Pinterest. Spearheaded by Albert. In close collaboration with Albert, Annie, and Patrik."
+
+

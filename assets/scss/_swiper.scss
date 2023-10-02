@@ -507,16 +507,24 @@ button.swiper-pagination-bullet {
 	display: none !important;
 }
 
-//SCROLL BAR HERE
+// SCROLL BAR HERE!
 .swiper-horizontal > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-horizontal {
 	position: absolute;
-	left: var(--swiper-scrollbar-sides-offset, 16px);
-	bottom: var(--swiper-scrollbar-bottom, 16px);
 	top: var(--swiper-scrollbar-top, auto);
 	z-index: 50;
-	height: var(--swiper-scrollbar-size, 3px);
+
+	left: var(--swiper-scrollbar-sides-offset, 16px);
+	bottom: var(--swiper-scrollbar-bottom, 4px);
 	width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 16px));
+	height: var(--swiper-scrollbar-size, 2px);
+
+	@include respond-to(medium) {
+		left: var(--swiper-scrollbar-sides-offset, 16px);
+		bottom: var(--swiper-scrollbar-bottom, 16px);
+		width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 16px));
+		height: var(--swiper-scrollbar-size, 3px);
+	}
 }
 .swiper-scrollbar.swiper-scrollbar-vertical,
 .swiper-vertical > .swiper-scrollbar {

@@ -75,19 +75,21 @@ h3 {
 // paragraph
 
 p {
-	font-size: 14px;
+	font-size: 13px;
 	max-width: 800px;
-	line-height: 1.5;
+	line-height: 1.6;
 	font-weight: 500;
-	letter-spacing: -0.2px;
-	opacity: .6;
+	letter-spacing: -.2px;
+	opacity: 1;
 	@include respond-to(medium) {
-		font-size: 16px;
+		font-size: 18px;
 		opacity: 1;
 		letter-spacing: -.7px;
 	}
 	@include respond-to(large) {
-		max-width: 640px;
+		font-size: 21px;
+		max-width: 720px;
+		letter-spacing: -1px;
 	}
 	&.--secondary {
 		font-size: 12px;
