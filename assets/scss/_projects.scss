@@ -69,8 +69,11 @@ section.project {
 	.leading {
 		flex: 1;
 		@include flexbox();
-		@include flex-direction(column);
+		@include flex-direction();
 		@include gap(0.5);
+		@include respond-to(large) {
+		@include flex-direction(column);
+		}
 	}
 	.trailing {
 		flex: 1;
