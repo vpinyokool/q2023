@@ -31,7 +31,7 @@ h2 {
 }
 
 h3 {
-	font-size: 17px;
+	font-size: 20px;
 	max-width: 800px;
 	font-weight: 600;
 	@include respond-to(medium) {
@@ -75,11 +75,11 @@ h3 {
 // paragraph
 
 p {
-	font-size: 13px;
+	font-size: 15px;
 	max-width: 800px;
 	line-height: 1.6;
 	font-weight: 500;
-	letter-spacing: -.2px;
+	letter-spacing: -.5px;
 	opacity: 1;
 	@include respond-to(medium) {
 		font-size: 18px;

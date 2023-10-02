@@ -26,15 +26,6 @@
 		{{ range .Site.Data.projects }} {{ $lowercaseTitle := .name | lower |
 		replaceRE " " "-" }}
 		<section class="project {{ $lowercaseTitle }}">
-						<div class="project-info-wrap">
-				<div class="leading">
-					<h3 class="--med">{{ .name }}</h3>
-					<h3 class="--med --secondary">{{ .year }}</h3>
-				</div>
-				<div class="trailing">
-					<p>{{ .caption }}</p>
-				</div>
-			</div>
 			{{ if eq .obj "swipe" }}
 
 			<!-- Slider main container -->
@@ -94,7 +85,15 @@
 				</div>
 			</div>
 			{{ end }}
-
+<div class="project-info-wrap">
+				<div class="leading">
+					<h3 class="--med">{{ .name }}</h3>
+					<h3 class="--med --secondary">{{ .year }}</h3>
+				</div>
+				<div class="trailing">
+					<p>{{ .caption }}</p>
+				</div>
+			</div>
 		</section>
 
 		{{ end }}
