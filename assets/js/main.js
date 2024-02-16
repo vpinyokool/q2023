@@ -48,17 +48,14 @@ function animateSections() {
 }
 
 function runSwiper() {
-	var swiper = new Swiper(".swiper", {
-      grabCursor: true,
-      centeredSlides: true,
-      // loop: true,
+    var swiper = new Swiper(".swiper", {
+        grabCursor: true,
+        centeredSlides: true,
 
-		// And if we need scrollbar
-		scrollbar: {
-			el: ".swiper-scrollbar",
-			// hide: true,
-		},
-	});
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
+    });
 }
 
 function animateHeader() {
