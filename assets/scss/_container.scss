@@ -30,8 +30,8 @@ section {
 
 // ANIMATION STYLE
 	opacity: 0;
-	transform: translateY(200px);
-	transform: rotateX(30deg);
+	transform: translateY(600px);
+	transform: rotateX(300deg);
 	transform-style: preserve-3d;
 
 	@include respond-to(medium) {
